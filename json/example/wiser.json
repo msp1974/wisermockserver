@@ -1,0 +1,1987 @@
+{
+    "home_assistant": {
+      "installation_type": "Home Assistant OS",
+      "version": "2022.9.7",
+      "dev": false,
+      "hassio": true,
+      "virtualenv": false,
+      "python_version": "3.10.5",
+      "docker": true,
+      "arch": "x86_64",
+      "timezone": "Europe/London",
+      "os_name": "Linux",
+      "os_version": "5.15.67",
+      "supervisor": "2022.09.1",
+      "host_os": "Home Assistant OS 9.0",
+      "docker_version": "20.10.17",
+      "chassis": "embedded",
+      "run_as_root": true
+    },
+    "custom_components": {
+      "browser_mod": {
+        "version": "2.1.0",
+        "requirements": []
+      },
+      "wiser": {
+        "version": "3.1.6",
+        "requirements": [
+          "wiserHeatAPIv2==0.0.40"
+        ]
+      },
+      "hacs": {
+        "version": "1.27.1",
+        "requirements": [
+          "aiogithubapi>=22.2.4"
+        ]
+      },
+      "alexa_media": {
+        "version": "4.1.1",
+        "requirements": [
+          "alexapy==1.26.2",
+          "packaging>=20.3",
+          "wrapt>=1.12.1"
+        ]
+      },
+      "virtual_presence_entities": {
+        "version": "0.0.1",
+        "requirements": []
+      }
+    },
+    "integration_manifest": {
+      "domain": "wiser",
+      "name": "Drayton Wiser Integration for Home Assistant",
+      "iot_class": "local_polling",
+      "config_flow": true,
+      "documentation": "https://github.com/asantaga/wiserHomeAssistantPlatform/blob/master/README.md",
+      "issue_tracker": "https://github.com/asantaga/wiserHomeAssistantPlatform/issues",
+      "dependencies": [
+        "http",
+        "websocket_api",
+        "frontend",
+        "lovelace"
+      ],
+      "codeowners": [
+        "@asantaga",
+        "@msp1974"
+      ],
+      "version": "3.1.6",
+      "requirements": [
+        "wiserHeatAPIv2==0.0.40"
+      ],
+      "zeroconf": [
+        {
+          "type": "_http._tcp.local.",
+          "name": "wiser*"
+        }
+      ],
+      "is_built_in": false
+    },
+    "data": {
+      "Domain": {
+        "System": {
+          "PairingStatus": "Paired",
+          "TimeZoneOffset": 0,
+          "AutomaticDaylightSaving": true,
+          "SystemMode": "Heat",
+          "FotaEnabled": true,
+          "ValveProtectionEnabled": true,
+          "EcoModeEnabled": true,
+          "AwayModeAffectsHotWater": false,
+          "AwayModeSetPointLimit": 110,
+          "BoilerSettings": {
+            "ControlType": "HeatSourceType_RelayControlled",
+            "FuelType": "Gas",
+            "CycleRate": "CPH_6",
+            "OnOffHysteresis": 5
+          },
+          "CoolingModeDefaultSetpoint": 210,
+          "CoolingAwayModeSetpointLimit": -200,
+          "ComfortModeEnabled": false,
+          "PreheatTimeLimit": 10800,
+          "DegradedModeSetpointThreshold": 50,
+          "GeoPosition": {
+            "Latitude": 30.4865,
+            "Longitude": 58.4892
+          },
+          "UfhOrphanModeOutput": "On",
+          "isMigrated": false,
+          "UnixTime": 1664383380,
+          "ActiveSystemVersion": "3.10.6-ad9fe6d98c",
+          "BrandName": "WiserHeat",
+          "CloudConnectionStatus": "Connected",
+          "ChipId": "0xa1120e00",
+          "LocalDateAndTime": {
+            "Year": 2022,
+            "Month": "September",
+            "Date": 28,
+            "Day": "Wednesday",
+            "Time": 1743
+          },
+          "HeatingButtonOverrideState": "Off",
+          "HotWaterButtonOverrideState": "Off",
+          "OpenThermConnectionStatus": "Disconnected",
+          "SunriseTimes": [
+            652,
+            654,
+            656,
+            657,
+            659,
+            701,
+            703,
+            704,
+            706,
+            708,
+            709,
+            711,
+            713
+          ],
+          "SunsetTimes": [
+            1907,
+            1904,
+            1902,
+            1900,
+            1857,
+            1855,
+            1852,
+            1850,
+            1848,
+            1845,
+            1843,
+            1841,
+            1838
+          ],
+          "isTrialist": false,
+          "isProvisioned": true,
+          "HardwareGeneration": 1
+        },
+        "Cloud": {
+          "DetailedPublishing": true,
+          "EnableDiagnosticTelemetry": false,
+          "WiserApiHost": "api-nl.wiserair.com",
+          "BootStrapApiHost": "bootstrap.gl.struxurewarecloud.com"
+        },
+        "HeatingChannel": [
+          {
+            "id": 1,
+            "Name": "Channel-1",
+            "RoomIds": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              13,
+              14
+            ],
+            "PercentageDemand": 100,
+            "DemandOnOffOutput": "On",
+            "HeatingRelayState": "On",
+            "IsSmartValvePreventingDemand": false
+          }
+        ],
+        "Room": [
+          {
+            "id": 1,
+            "ManualSetPoint": -200,
+            "ScheduleId": 1,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              4
+            ],
+            "UfhRelayIds": [],
+            "Name": "Lounge",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": false,
+            "CalculatedTemperature": 197,
+            "CurrentSetPoint": 210,
+            "PercentageDemand": 100,
+            "ControlOutputState": "On",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 210,
+            "ScheduledSetPoint": 210,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 195,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 100,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 2,
+            "ManualSetPoint": -200,
+            "ScheduleId": 2,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              2
+            ],
+            "UfhRelayIds": [],
+            "Name": "Kitchen",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 194,
+            "CurrentSetPoint": 180,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 180,
+            "ScheduledSetPoint": 180,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 195,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 3,
+            "ManualSetPoint": -200,
+            "ScheduleId": 3,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              3
+            ],
+            "UfhRelayIds": [],
+            "Name": "Dining Room",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 223,
+            "CurrentSetPoint": 140,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 140,
+            "ScheduledSetPoint": 140,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 225,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 4,
+            "ManualSetPoint": -200,
+            "ScheduleId": 4,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              11
+            ],
+            "UfhRelayIds": [],
+            "Name": "Master Bedroom",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 200,
+            "CurrentSetPoint": 180,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 180,
+            "ScheduledSetPoint": 180,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 200,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 5,
+            "ManualSetPoint": 210,
+            "ScheduleId": 5,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              9
+            ],
+            "Name": "Hallway",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 200,
+            "CurrentSetPoint": 180,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 180,
+            "ScheduledSetPoint": 180,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 200,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 6,
+            "ManualSetPoint": 180,
+            "ScheduleId": 6,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              6
+            ],
+            "Name": "Guest Room",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 245,
+            "CurrentSetPoint": 150,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 150,
+            "ScheduledSetPoint": 150,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 245,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 7,
+            "ManualSetPoint": 220,
+            "ScheduleId": 10,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              7
+            ],
+            "Name": "Other Bedroom",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 176,
+            "CurrentSetPoint": 160,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 160,
+            "ScheduledSetPoint": 160,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 175,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 8,
+            "ManualSetPoint": -200,
+            "ScheduleId": 8,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              8
+            ],
+            "Name": "Landing",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 204,
+            "CurrentSetPoint": 180,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 180,
+            "ScheduledSetPoint": 180,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 205,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 9,
+            "ManualSetPoint": -200,
+            "ScheduleId": 9,
+            "HeatingRate": 1200,
+            "SmartValveIds": [
+              5
+            ],
+            "Name": "Office",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 213,
+            "CurrentSetPoint": 200,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "WindowState": "Closed",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 200,
+            "ScheduledSetPoint": 200,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 215,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 14,
+            "ManualSetPoint": 50,
+            "ScheduleId": 16,
+            "HeatingRate": 1200,
+            "RoomStatId": 1,
+            "Name": "Snug",
+            "Mode": "Auto",
+            "DemandType": "Modulating",
+            "WindowDetectionActive": true,
+            "CalculatedTemperature": 186,
+            "CurrentSetPoint": 130,
+            "PercentageDemand": 0,
+            "ControlOutputState": "Off",
+            "SetpointOrigin": "FromSchedule",
+            "DisplayedSetPoint": 130,
+            "ScheduledSetPoint": 130,
+            "AwayModeSuppressed": false,
+            "RoundedAlexaTemperature": 185,
+            "EffectiveMode": "Auto",
+            "PercentageDemandForItrv": 0,
+            "ControlDirection": "Heat",
+            "HeatingType": "HydronicRadiator"
+          },
+          {
+            "id": 13,
+            "HeatingRate": 1200,
+            "Name": "Test Room",
+            "Mode": "Manual",
+            "WindowDetectionActive": false,
+            "CalculatedTemperature": -32768,
+            "CurrentSetPoint": -200,
+            "SetpointOrigin": "FromNoControl",
+            "DisplayedSetPoint": -200,
+            "Invalid": "NoTemperatureInput",
+            "EffectiveMode": "Manual",
+            "ControlDirection": "None"
+          },
+          {
+            "id": 15,
+            "HeatingRate": 1200,
+            "Name": "Msp",
+            "Mode": "Manual",
+            "WindowDetectionActive": false,
+            "CalculatedTemperature": -32768,
+            "CurrentSetPoint": -200,
+            "SetpointOrigin": "FromNoControl",
+            "DisplayedSetPoint": -200,
+            "Invalid": "NothingAssigned",
+            "EffectiveMode": "Manual",
+            "ControlDirection": "None"
+          }
+        ],
+        "Device": [
+          {
+            "id": 0,
+            "NodeId": 0,
+            "ProductType": "Controller",
+            "ProductIdentifier": "Controller",
+            "ActiveFirmwareVersion": "3.10.6",
+            "ModelIdentifier": "WT714R1S0902",
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "VeryGood",
+            "ReceptionOfController": {
+              "Rssi": -45
+            },
+            "ReceptionOfDevice": {
+              "Rssi": 0,
+              "Lqi": 255
+            },
+            "BindingsStatus": "Unchecked",
+            "ReportConfigStatus": "Unchecked"
+          },
+          {
+            "id": 1,
+            "NodeId": 51238,
+            "ProductType": "RoomStat",
+            "ProductIdentifier": "RoomStat",
+            "ActiveFirmwareVersion": "0000a412",
+            "ModelIdentifier": "Thermostat",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "Thermostat",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 0,
+            "ParentNodeId": 62786,
+            "OtaVersion": 42002,
+            "OtaHardwareVersion": 1,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Good",
+            "BatteryVoltage": 27,
+            "BatteryLevel": "Normal",
+            "ReceptionOfController": {
+              "Rssi": -64,
+              "Lqi": 144
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -71,
+              "Lqi": 116
+            },
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 2,
+            "NodeId": 16988,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 62786,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "VeryGood",
+            "BatteryVoltage": 26,
+            "BatteryLevel": "Low",
+            "ReceptionOfController": {
+              "Rssi": -59,
+              "Lqi": 164
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -71,
+              "Lqi": 116
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 3,
+            "NodeId": 55258,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 0,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Poor",
+            "BatteryVoltage": 26,
+            "BatteryLevel": "Low",
+            "ReceptionOfController": {
+              "Rssi": -84,
+              "Lqi": 64
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -80,
+              "Lqi": 80
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 4,
+            "NodeId": 6004,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 0,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Medium",
+            "BatteryVoltage": 31,
+            "BatteryLevel": "Normal",
+            "ReceptionOfController": {
+              "Rssi": -77,
+              "Lqi": 92
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -70,
+              "Lqi": 120
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 5,
+            "NodeId": 40431,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 62786,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Poor",
+            "BatteryVoltage": 30,
+            "BatteryLevel": "Normal",
+            "ReceptionOfController": {
+              "Rssi": -93,
+              "Lqi": 28
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -75,
+              "Lqi": 100
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 6,
+            "NodeId": 34330,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 2,
+            "ParentNodeId": 62786,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Medium",
+            "BatteryVoltage": 23,
+            "BatteryLevel": "Critical",
+            "ReceptionOfController": {
+              "Rssi": -79,
+              "Lqi": 84
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -71,
+              "Lqi": 116
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 7,
+            "NodeId": 24036,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 0,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Poor",
+            "BatteryVoltage": 25,
+            "BatteryLevel": "Low",
+            "ReceptionOfController": {
+              "Rssi": -86,
+              "Lqi": 56
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -78,
+              "Lqi": 88
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 8,
+            "NodeId": 3098,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 62786,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Medium",
+            "BatteryVoltage": 26,
+            "BatteryLevel": "Low",
+            "ReceptionOfController": {
+              "Rssi": -73,
+              "Lqi": 108
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -73,
+              "Lqi": 108
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 9,
+            "NodeId": 60133,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 0,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Medium",
+            "BatteryVoltage": 31,
+            "BatteryLevel": "Normal",
+            "ReceptionOfController": {
+              "Rssi": -77,
+              "Lqi": 92
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -68,
+              "Lqi": 128
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 12,
+            "NodeId": 62786,
+            "ProductType": "SmartPlug",
+            "ProductIdentifier": "HeimanSmartplug",
+            "ActiveFirmwareVersion": "00000022",
+            "ModelIdentifier": "SmartPlug",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "OtaVersion": 34,
+            "DeviceLockEnabled": true,
+            "DisplayedSignalStrength": "Online",
+            "ReceptionOfDevice": {
+              "Rssi": -71,
+              "Lqi": 116
+            },
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          },
+          {
+            "id": 11,
+            "NodeId": 25267,
+            "ProductType": "iTRV",
+            "ProductIdentifier": "iTRV",
+            "ActiveFirmwareVersion": "0000dac0",
+            "ModelIdentifier": "iTRV",
+            "SerialNumber": "ANON_SERIAL",
+            "ProductModel": "iTRV",
+            "OtaImageQueryCount": 0,
+            "LastOtaImageQueryCount": 1,
+            "ParentNodeId": 62786,
+            "OtaVersion": 56000,
+            "OtaHardwareVersion": 0,
+            "DeviceLockEnabled": false,
+            "DisplayedSignalStrength": "Good",
+            "BatteryVoltage": 27,
+            "BatteryLevel": "OneThird",
+            "ReceptionOfController": {
+              "Rssi": -66,
+              "Lqi": 136
+            },
+            "ReceptionOfDevice": {
+              "Rssi": -71,
+              "Lqi": 116
+            },
+            "PendingZigbeeMessageMask": 0,
+            "BindingsStatus": "SetCorrectly",
+            "ReportConfigStatus": "SetCorrectly"
+          }
+        ],
+        "Zigbee": {
+          "Error72Reset": 13,
+          "JPANCount": 14,
+          "NetworkChannel": 11,
+          "NoSignalReset": 1,
+          "UpdateEBLState": "Successful",
+          "CurrentEBLFile": "CICIE-1.2.0-3d1043a1.ebl",
+          "TargetEBLFile": "CICIE-1.2.0-3d1043a1.ebl",
+          "UpdateAttempts": 2,
+          "OTAPromptFailures": 1,
+          "ZigbeeModuleVersion": "1.2.0-3d1043a1",
+          "ZigbeeEUI": "90FD9FFFFEB3009A"
+        },
+        "UpgradeInfo": [
+          {
+            "id": 1,
+            "FirmwareFilename": "105E-0E00-01060500-0000-00FF.zigbee"
+          },
+          {
+            "id": 2,
+            "FirmwareFilename": "105E-0201-0000DAC0-0000-0000.zigbee"
+          },
+          {
+            "id": 3,
+            "FirmwareFilename": "105E-04E1-0000A412-0000-0009.zigbee"
+          },
+          {
+            "id": 4,
+            "FirmwareFilename": "105E-05E1-00000017-0000-0009.zigbee"
+          },
+          {
+            "id": 5,
+            "FirmwareFilename": "105E-0A00-00007D02-0000-0000.zigbee"
+          },
+          {
+            "id": 6,
+            "FirmwareFilename": "105E-000B-020A01FF-0100-02FF.zigbee"
+          },
+          {
+            "id": 7,
+            "FirmwareFilename": "105E-000D-020A00FF-0000-01FF.zigbee"
+          },
+          {
+            "id": 8,
+            "FirmwareFilename": "105E-0010-020A00FF-0000-01FF.zigbee"
+          },
+          {
+            "id": 9,
+            "FirmwareFilename": "105E-0011-020A00FF-0000-01FF.zigbee"
+          },
+          {
+            "id": 10,
+            "FirmwareFilename": "105E-0012-020A00FF-0000-01FF.zigbee"
+          },
+          {
+            "id": 11,
+            "FirmwareFilename": "105E-0013-020A00FF-0000-01FF.zigbee"
+          },
+          {
+            "id": 12,
+            "FirmwareFilename": "120B-210B-00000022-0000-FFFF.zigbee"
+          }
+        ],
+        "SmartValve": [
+          {
+            "id": 2,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 180,
+            "MeasuredTemperature": 194,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 2
+          },
+          {
+            "id": 3,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 140,
+            "MeasuredTemperature": 223,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 3
+          },
+          {
+            "id": 4,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 210,
+            "MeasuredTemperature": 197,
+            "PercentageDemand": 100,
+            "WindowState": "Closed",
+            "RoomId": 1
+          },
+          {
+            "id": 5,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 200,
+            "MeasuredTemperature": 213,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 9
+          },
+          {
+            "id": 6,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 150,
+            "MeasuredTemperature": 245,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 6
+          },
+          {
+            "id": 7,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 160,
+            "MeasuredTemperature": 176,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 7
+          },
+          {
+            "id": 8,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 180,
+            "MeasuredTemperature": 204,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 8
+          },
+          {
+            "id": 9,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 180,
+            "MeasuredTemperature": 200,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 5
+          },
+          {
+            "id": 11,
+            "MountingOrientation": "Vertical",
+            "SetPoint": 180,
+            "MeasuredTemperature": 200,
+            "PercentageDemand": 0,
+            "WindowState": "Closed",
+            "RoomId": 4
+          }
+        ],
+        "RoomStat": [
+          {
+            "id": 1,
+            "SetPoint": 130,
+            "MeasuredTemperature": 186,
+            "MeasuredHumidity": 72,
+            "RoomId": 14
+          }
+        ],
+        "SmartPlug": [
+          {
+            "id": 12,
+            "ScheduleId": 2,
+            "ManualState": "On",
+            "OverrideState": "On",
+            "Name": "Smartplug1",
+            "Mode": "Auto",
+            "AwayAction": "NoChange",
+            "RoomId": 2,
+            "OutputState": "On",
+            "ControlSource": "FromManualOverride",
+            "ScheduledState": "Off",
+            "CurrentSummationDelivered": 26872,
+            "InstantaneousDemand": 0,
+            "TargetState": "On"
+          }
+        ],
+        "Moment": [
+          {
+            "id": 1,
+            "Name": "Test",
+            "IconId": 0
+          },
+          {
+            "id": 2,
+            "Name": "Test2",
+            "IconId": 0
+          }
+        ],
+        "DeviceCapabilityMatrix": {
+          "Roomstat": true,
+          "ITRV": true,
+          "SmartPlug": true,
+          "UFH": true,
+          "UFHFloorTempSensor": true,
+          "UFHDewSensor": true,
+          "HACT": false,
+          "LACT": false,
+          "Light": false,
+          "Shutter": false,
+          "LoadController": true
+        }
+      },
+      "Network": {
+        "AccessPoint": {
+          "Enabled": false,
+          "Channel": 1,
+          "SecurityMode": "Open",
+          "MacAddress": "ANON_MAC",
+          "NetworkInterface": {
+            "InterfaceName": "wlan1",
+            "HostName": "WiserHeatXXXXXX",
+            "DhcpMode": "Server",
+            "IPv4HostAddress": "ANON_IP",
+            "IPv4SubnetMask": "255.255.255.0",
+            "IPv4DefaultGateway": "ANON_IP",
+            "IPv4PrimaryDNS": "ANON_IP",
+            "IPv4SecondaryDNS": "ANON_IP"
+          }
+        },
+        "Station": {
+          "Enabled": true,
+          "SSID": "ANON_SSID",
+          "SecurityMode": "WPA_WPA2_PSK",
+          "ScanSlotTime": 20,
+          "ScanSlots": 2,
+          "NetworkInterface": {
+            "InterfaceName": "wlan0",
+            "HostName": "WiserHeatXXXXXX",
+            "DhcpMode": "Client"
+          },
+          "ConnectionStatus": "Connected",
+          "DhcpStatus": {
+            "Status": "BOUND",
+            "LeaseStartTime": 1169344277,
+            "LeaseTime": 20864,
+            "IPv4Address": "ANON_IP",
+            "IPv4SubnetMask": "255.255.255.0",
+            "IPv4DefaultGateway": "ANON_IP",
+            "IPv4PrimaryDNS": "ANON_IP",
+            "IPv4SecondaryDNS": "ANON_IP"
+          },
+          "Scanning": false,
+          "DetectedAccessPoints": [
+            {
+              "SSID": "ANON_SSID",
+              "Channel": 1,
+              "SecurityMode": "WPA_WPA2_PSK",
+              "RSSI": -65
+            },
+            {
+              "SSID": "ANON_SSID",
+              "Channel": 1,
+              "SecurityMode": "Open",
+              "RSSI": -72
+            },
+            {
+              "SSID": "ANON_SSID",
+              "Channel": 13,
+              "SecurityMode": "WPA_WPA2_PSK",
+              "RSSI": -45
+            },
+            {
+              "SSID": "ANON_SSID",
+              "Channel": 13,
+              "SecurityMode": "WPA_WPA2_PSK",
+              "RSSI": -83
+            },
+            {
+              "SSID": "ANON_SSID",
+              "Channel": 6,
+              "SecurityMode": "WPA_WPA2_PSK",
+              "RSSI": -92
+            },
+            {
+              "SSID": "ANON_SSID",
+              "Channel": 6,
+              "SecurityMode": "Open",
+              "RSSI": -94
+            }
+          ],
+          "ConnectionFailures": 0,
+          "MdnsHostname": "WiserHeatXXXXXX",
+          "MacAddress": "ANON_MAC",
+          "RSSI": {
+            "Current": -45,
+            "Min": -91,
+            "Max": -41
+          },
+          "Channel": 255,
+          "UseGoogleDNS": true
+        },
+        "TcpStats_SinceBoot": {
+          "TimeLastUpdated": 1664383320,
+          "SegmentsSent_Count": 1783439,
+          "SegmentRetransmissions_Count": 2994,
+          "SocketTimeouts_Count": 0,
+          "StackRespawns_Count": 15
+        }
+      },
+      "Schedule": {
+        "Heating": [
+          {
+            "id": 1,
+            "Name": "Lounge",
+            "Monday": {
+              "Time": [
+                730,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                730,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                730,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                730,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "Friday": {
+              "Time": [
+                730,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                900,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                900,
+                1700,
+                2300
+              ],
+              "DegreesC": [
+                190,
+                210,
+                160
+              ]
+            },
+            "CurrentSetpoint": 210,
+            "Next": {
+              "Day": "Wednesday",
+              "Time": 2300,
+              "DegreesC": 160
+            }
+          },
+          {
+            "id": 2,
+            "Name": "Kitchen",
+            "Monday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Friday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "CurrentSetpoint": 180,
+            "Next": {
+              "Day": "Wednesday",
+              "Time": 1900,
+              "DegreesC": 140
+            }
+          },
+          {
+            "id": 3,
+            "Name": "Dining Room",
+            "Monday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                140
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                140
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                140
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                800
+              ],
+              "DegreesC": [
+                -200
+              ]
+            },
+            "Friday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                140
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                140
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                1200
+              ],
+              "DegreesC": [
+                -200
+              ]
+            },
+            "CurrentSetpoint": 140,
+            "Next": {
+              "Day": "Thursday",
+              "Time": 800,
+              "DegreesC": 65336
+            }
+          },
+          {
+            "id": 4,
+            "Name": "Master Bedroom",
+            "Monday": {
+              "Time": [
+                730,
+                900,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                730,
+                900,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                730,
+                900,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                730,
+                900,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "Friday": {
+              "Time": [
+                730,
+                900,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                730,
+                1000,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                730,
+                1000,
+                2200,
+                2300
+              ],
+              "DegreesC": [
+                200,
+                180,
+                210,
+                180
+              ]
+            },
+            "CurrentSetpoint": 180,
+            "Next": {
+              "Day": "Wednesday",
+              "Time": 2200,
+              "DegreesC": 210
+            }
+          },
+          {
+            "id": 5,
+            "Name": "Hallway",
+            "Monday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Friday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "CurrentSetpoint": 180,
+            "Next": {
+              "Day": "Wednesday",
+              "Time": 1900,
+              "DegreesC": 140
+            }
+          },
+          {
+            "id": 6,
+            "Name": "Guest Room",
+            "Monday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "Friday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                900
+              ],
+              "DegreesC": [
+                150
+              ]
+            },
+            "CurrentSetpoint": 150,
+            "Next": {
+              "Day": "Thursday",
+              "Time": 900,
+              "DegreesC": 150
+            }
+          },
+          {
+            "id": 8,
+            "Name": "Landing",
+            "Monday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Friday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                730,
+                900,
+                1900
+              ],
+              "DegreesC": [
+                210,
+                180,
+                140
+              ]
+            },
+            "CurrentSetpoint": 180,
+            "Next": {
+              "Day": "Wednesday",
+              "Time": 1900,
+              "DegreesC": 140
+            }
+          },
+          {
+            "id": 9,
+            "Name": "Office",
+            "Monday": {
+              "Time": [
+                830,
+                1830,
+                2330
+              ],
+              "DegreesC": [
+                200,
+                180,
+                140
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                830,
+                1830,
+                2330
+              ],
+              "DegreesC": [
+                200,
+                180,
+                140
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                830,
+                1830,
+                2330
+              ],
+              "DegreesC": [
+                200,
+                180,
+                140
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                830,
+                1830,
+                2330
+              ],
+              "DegreesC": [
+                200,
+                180,
+                140
+              ]
+            },
+            "Friday": {
+              "Time": [
+                830,
+                1830,
+                2330
+              ],
+              "DegreesC": [
+                200,
+                180,
+                140
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                1000,
+                2330
+              ],
+              "DegreesC": [
+                180,
+                140
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                1000,
+                2330
+              ],
+              "DegreesC": [
+                180,
+                140
+              ]
+            },
+            "CurrentSetpoint": 200,
+            "Next": {
+              "Day": "Wednesday",
+              "Time": 1830,
+              "DegreesC": 180
+            }
+          },
+          {
+            "id": 10,
+            "Name": "Beths Room",
+            "Monday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                160
+              ]
+            },
+            "Tuesday": {
+              "Time": [],
+              "DegreesC": []
+            },
+            "Wednesday": {
+              "Time": [],
+              "DegreesC": []
+            },
+            "Thursday": {
+              "Time": [],
+              "DegreesC": []
+            },
+            "Friday": {
+              "Time": [],
+              "DegreesC": []
+            },
+            "Saturday": {
+              "Time": [],
+              "DegreesC": []
+            },
+            "Sunday": {
+              "Time": [],
+              "DegreesC": []
+            },
+            "CurrentSetpoint": 160,
+            "Next": {
+              "Day": "Monday",
+              "Time": 0,
+              "DegreesC": 160
+            }
+          },
+          {
+            "id": 16,
+            "Name": "Snug",
+            "Monday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "Tuesday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "Wednesday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "Thursday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "Friday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "Saturday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "Sunday": {
+              "Time": [
+                0
+              ],
+              "DegreesC": [
+                130
+              ]
+            },
+            "CurrentSetpoint": 130,
+            "Next": {
+              "Day": "Thursday",
+              "Time": 0,
+              "DegreesC": 130
+            }
+          }
+        ],
+        "OnOff": [
+          {
+            "id": 2,
+            "Name": "Smartplug-1",
+            "Monday": [],
+            "Tuesday": [],
+            "Wednesday": [
+              -1000
+            ],
+            "Thursday": [
+              600
+            ],
+            "Friday": [],
+            "Saturday": [],
+            "Sunday": [
+              -1200,
+              1630
+            ],
+            "CurrentState": "Off",
+            "Next": {
+              "Day": "Thursday",
+              "Time": 600,
+              "State": "On"
+            }
+          }
+        ]
+      },
+      "OpenTherm": {
+        "chFlowActiveUpperSetpoint": 800,
+        "chFlowActiveLowerSetpoint": 350,
+        "dhwFlowSetpoint": 550,
+        "dhwEnable": true,
+        "Enabled": true,
+        "transmitter": {
+          "messagesSentCount": 2113176
+        },
+        "operatingMode": "NegotiatingOTplus",
+        "ch1FlowSetpoint": 350,
+        "ch1FlowEnable": false,
+        "ch2FlowSetpoint": 350,
+        "ch2FlowEnable": false,
+        "roomTemperature": 197,
+        "roomSetpoint": 210,
+        "TrackedRoomId": 1
+      }
+    }
+  }
